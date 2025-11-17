@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="markdown-export-tools" Version="0.0.1" Publisher="YourName" />
+    <DisplayName>Markdown Export Tools</DisplayName>
+    <Description xml:space="preserve">A VS Code extension to export Markdown files to PDF and Word formats.</Description>
+    <Tags>markdown,pdf,word,export,convert</Tags>
+    <Categories>Other</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.74.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+    </Properties>
+  </Metadata>
+</PackageManifest>

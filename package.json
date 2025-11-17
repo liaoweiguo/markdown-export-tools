@@ -1,0 +1,82 @@
+{
+  "name": "markdown-export-tools",
+  "displayName": "Markdown Export Tools",
+  "description": "A VS Code extension to export Markdown files to PDF and Word formats",
+  "version": "0.0.28",
+  "publisher": "Youcai",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "markdown",
+    "pdf",
+    "word",
+    "export",
+    "convert"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liaoweiguo/markdown-export-tools.git"
+  },
+  "activationEvents": [
+    "onCommand:markdown-export-tools.exportToPdf",
+    "onCommand:markdown-export-tools.exportToWord"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdown-export-tools.exportToPdf",
+        "title": "Markdown: Export to PDF"
+      },
+      {
+        "command": "markdown-export-tools.exportToWord",
+        "title": "Markdown: Export to Word"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceLangId == markdown",
+          "command": "markdown-export-tools.exportToPdf",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceLangId == markdown",
+          "command": "markdown-export-tools.exportToWord",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceLangId == markdown",
+          "command": "markdown-export-tools.exportToPdf",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceLangId == markdown",
+          "command": "markdown-export-tools.exportToWord",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "eslint": "^8.28.0"
+  },
+  "dependencies": {
+    "@mdast2docx/table": "^0.1.1",
+    "html-to-docx": "^1.8.0",
+    "markdown-pdf": "^10.0.0"
+  }
+}
