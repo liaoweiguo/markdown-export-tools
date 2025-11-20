@@ -27,7 +27,11 @@ A Visual Studio Code extension that provides tools to export Markdown files to P
    ```bash
    brew install pandoc
    ```
-3. for Windows, you can use Chocolatey:
+3. for Linux, you can use your package manager, e.g., for Ubuntu:
+   ```bash
+   sudo apt-get install pandoc
+   ```
+4. for Windows, you can use Chocolatey:
    ```bash
    choco install pandoc
    ```
