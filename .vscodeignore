@@ -2,8 +2,27 @@ node_modules/.cache
 node_modules/.bin
 node_modules/**/*.map
 node_modules/**/test*/
+node_modules/**/tests
 node_modules/**/docs
 node_modules/**/examples
+node_modules/**/CHANGELOG.md
+node_modules/**/README.md
+node_modules/**/LICENSE
+node_modules/**/LICENSE*
+# 保留 markdown-pdf 及其依赖
+!node_modules/markdown-pdf/**
+!node_modules/phantomjs-prebuilt/**
+!node_modules/fs-extra/**
+!node_modules/pdfjs-dist/**
+# 保留 html-to-docx 及其依赖
+!node_modules/html-to-docx/**
+!node_modules/@mdast2docx/**
+node_modules/unified/**
+node_modules/remark-parse/**
+node_modules/remark-gfm/**
+node_modules/@types/**
+node_modules/**/package-lock.json
+node_modules/**/yarn.lock
 *.vsix
 .DS_Store
 *.log
@@ -15,6 +34,8 @@ sample.md
 .vsixmanifest
 o.docx
 ~$*.docx
-*.pdf
 test-markdown.*
 i.md
+reference.docx
+*.md
+!table-styles.css

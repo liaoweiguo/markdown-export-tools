@@ -2,7 +2,7 @@
   "name": "markdown-export-tools",
   "displayName": "Markdown Export Tools",
   "description": "A VS Code extension to export Markdown files to PDF and Word formats",
-  "version": "0.0.28",
+  "version": "0.0.30",
   "publisher": "Youcai",
   "icon": "icon.png",
   "engines": {
@@ -67,16 +67,23 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
     "@types/node": "16.x",
     "@types/vscode": "^1.74.0",
-    "eslint": "^8.28.0"
+    "babel-loader": "^10.0.0",
+    "eslint": "^8.28.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "@mdast2docx/table": "^0.1.1",
-    "html-to-docx": "^1.8.0",
     "markdown-pdf": "^10.0.0"
   }
 }

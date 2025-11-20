@@ -144,7 +144,7 @@ tr:nth-child(even) {
                 
                 // Check if reference doc exists
                 if (!fs.existsSync(referenceDocPath)) {
-                    throw new Error('reference.docx not found in extension folder. Please create it with custom table styles.');
+                    throw new Error('template.docx not found in extension folder. Please create it with custom table styles.');
                 }
                 
                 // Prepare Pandoc command using the temp file and reference doc for styling
