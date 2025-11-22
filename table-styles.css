@@ -1,7 +1,12 @@
+body {
+  font-size: 12px; /* 调整为你想要的字体大小 */
+}
+
 table {
   border-collapse: collapse !important;
   width: 100% !important;
   margin: 5px 0 !important;
+  font-size: 12px; /* 表格内的字体大小 */
 }
 
 table, th, td {
